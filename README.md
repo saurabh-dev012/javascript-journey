@@ -14,6 +14,7 @@ This repo is organized into two main sections:
 - DOM manipulation
 - Events and event handling
 - Functions and closures
+- Closure-based UI practice
 - Objects and data modeling
 - Timers and intervals
 - LocalStorage, sessionStorage, and cookies
@@ -29,6 +30,7 @@ The `Practice-Problems/` folder includes exercises grouped by topic:
 - `dom/` — DOM-related tasks
 - `events-and-eventHandling/` — user interaction patterns
 - `functions/` — function practice, closures, and reusable logic
+- `closures/` — closure-focused mini exercises such as private counters and toaster interactions
 - `localStorage-sessionStorage-cookies/` — browser storage concepts
 - `objects/` — object-oriented JS exercises
 - `timers-and-intervals/` — countdown and async-style timing tasks
@@ -41,7 +43,7 @@ The `projects/` folder contains mini frontend apps:
 - `random-emojiGenerator/` — emoji generator UI
 - `user-finder/` — user search and finder interface
 
-## Tech Stack
+## Tech Stack Used
 
 - HTML
 - CSS
