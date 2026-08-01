@@ -31,6 +31,8 @@ The `Practice-Problems/` folder includes exercises grouped by topic:
 - `events-and-eventHandling/` — user interaction patterns
 - `functions/` — function practice, closures, and reusable logic
 - `closures/` — closure-focused mini exercises such as private counters and toaster interactions
+- `classes/` — class-based JavaScript practice
+- `oops/` — object-oriented programming practice examples
 - `localStorage-sessionStorage-cookies/` — browser storage concepts
 - `objects/` — object-oriented JS exercises
 - `timers-and-intervals/` — countdown and async-style timing tasks
