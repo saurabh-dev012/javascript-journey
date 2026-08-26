@@ -45,3 +45,68 @@ input.addEventListener("keydown", function(event) {
         addTask();
     }
 });
+
+todoList.addEventListener("click", function(event) {
+    if (event.target.classList.contains("delete-btn")) {
+        event.target.closest(".todo-item").remove();
+        updateCounters();
+        updateEmptyState();
+    }
+
+    if (event.target.classList.contains("todo-checkbox")) {
+        event.target.closest(".todo-item").classList.toggle("completed");
+        updateCounters();
+        filterTasks();
+    }
+});
+
+function updateCounters() {
+    const tasks = todoList.querySelectorAll(".todo-item");
+    const completed = todoList.querySelectorAll(".todo-item.completed").length;
+
+    taskCount.textContent = tasks.length;
+    remainingCount.textContent = tasks.length - completed;
+}
+
+function updateEmptyState() {
+    emptyMessage.style.display = todoList.children.length === 0 ? "block" : "none";
+}
+
+let currentFilter = "all";
+
+filters.forEach(function(filter) {
+    filter.addEventListener("click", function() {
+        currentFilter = filter.dataset.filter;
+
+        filters.forEach(function(button) {
+            button.classList.remove("active");
+        });
+
+        filter.classList.add("active");
+        filterTasks();
+    });
+});
+
+function filterTasks() {
+    todoList.querySelectorAll(".todo-item").forEach(function(task) {
+        const isCompleted = task.classList.contains("completed");
+        const shouldShow = currentFilter === "all"
+            || (currentFilter === "active" && !isCompleted)
+            || (currentFilter === "completed" && isCompleted);
+
+        task.style.display = shouldShow ? "flex" : "none";
+    });
+}
+
+clearCompletedBtn.addEventListener("click", function() {
+    todoList.querySelectorAll(".todo-item.completed").forEach(function(task) {
+        task.remove();
+    });
+
+    updateCounters();
+    updateEmptyState();
+    filterTasks();
+});
+
+updateCounters();
+updateEmptyState();
