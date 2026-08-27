@@ -1,0 +1,440 @@
+/* ------------------------------
+   Reset
+------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ------------------------------
+   Body
+------------------------------ */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #312e81,
+      transparent 35%
+    ),
+    #111827;
+
+  color: #f9fafb;
+}
+
+
+/* ------------------------------
+   Main App
+------------------------------ */
+
+.app {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 30px;
+
+  background: rgba(31, 41, 55, 0.95);
+
+  border: 1px solid #374151;
+  border-radius: 20px;
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  margin-bottom: 6px;
+
+  color: #818cf8;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  color: white;
+}
+
+
+/* ------------------------------
+   Task Counter
+------------------------------ */
+
+.task-counter {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #312e81;
+
+  border-radius: 14px;
+}
+
+.task-counter span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.task-counter small {
+  color: #c7d2fe;
+  font-size: 11px;
+}
+
+
+/* ------------------------------
+   Add Task
+------------------------------ */
+
+.add-task {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 22px;
+}
+
+#todo-input {
+  flex: 1;
+
+  padding: 14px 16px;
+
+  background: #111827;
+
+  color: white;
+
+  border: 1px solid #4b5563;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: 0.2s;
+}
+
+#todo-input::placeholder {
+  color: #6b7280;
+}
+
+#todo-input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+
+/* Add Button */
+
+#add-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #6366f1;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#add-btn span {
+  font-size: 20px;
+}
+
+#add-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+
+/* ------------------------------
+   Filters
+------------------------------ */
+
+.filters {
+  display: flex;
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #374151;
+}
+
+.filter {
+  padding: 7px 14px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: transparent;
+  color: #9ca3af;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.filter:hover {
+  color: white;
+  background: #374151;
+}
+
+.filter.active {
+  background: #6366f1;
+  color: white;
+}
+
+
+/* ------------------------------
+   Todo List
+------------------------------ */
+
+#todo-list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* Individual Todo */
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px;
+
+  background: #111827;
+
+  border: 1px solid #374151;
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+.todo-item:hover {
+  border-color: #6366f1;
+}
+
+
+/* Checkbox */
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  border: 2px solid #6b7280;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+
+/* Todo Text */
+
+.todo-text {
+  flex: 1;
+
+  color: #e5e7eb;
+
+  font-size: 15px;
+}
+
+.todo-item.completed .todo-text {
+  color: #6b7280;
+
+  text-decoration: line-through;
+}
+
+
+/* Todo Actions */
+
+.todo-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.todo-actions button {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #374151;
+  color: #d1d5db;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.todo-actions button:hover {
+  background: #4b5563;
+}
+
+.delete-btn:hover {
+  color: #f87171 !important;
+}
+
+
+/* ------------------------------
+   Empty State
+------------------------------ */
+
+.empty-state {
+  text-align: center;
+
+  padding: 45px 20px;
+
+  color: #9ca3af;
+}
+
+.empty-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #312e81;
+  color: #a5b4fc;
+
+  font-size: 25px;
+}
+
+.empty-state h2 {
+  margin-bottom: 7px;
+
+  color: #e5e7eb;
+
+  font-size: 18px;
+}
+
+.empty-state p {
+  font-size: 13px;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+  padding-top: 15px;
+
+  border-top: 1px solid #374151;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+#clear-completed {
+  border: none;
+
+  background: transparent;
+  color: #818cf8;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+#clear-completed:hover {
+  color: #a5b4fc;
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 500px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 26px;
+  }
+
+  .add-task {
+    flex-direction: column;
+  }
+
+  #add-btn {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .task-counter {
+    width: 55px;
+    height: 55px;
+  }
+
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TaskFlow - To Do</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div>
+        <p class="subtitle">STAY ORGANIZED</p>
+        <h1>My Tasks</h1>
+      </div>
+
+      <div class="task-counter">
+        <span id="task-count">0</span>
+        <small>Tasks</small>
+      </div>
+    </header>
+
+
+    <!-- Add Task -->
+    <section class="add-task">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+      >
+
+      <button id="add-btn">
+        <span>+</span>
+        Add Task
+      </button>
+    </section>
+
+
+    <!-- Filters -->
+    <nav class="filters">
+      <button class="filter active" data-filter="all">
+        All
+      </button>
+
+      <button class="filter" data-filter="active">
+        Active
+      </button>
+
+      <button class="filter" data-filter="completed">
+        Completed
+      </button>
+    </nav>
+
+
+    <!-- Tasks -->
+    <section class="tasks-section">
+
+      <ul id="todo-list">
+        <!-- JavaScript will add tasks here -->
+      </ul>
+
+      <!-- Empty State -->
+      <div id="empty-message" class="empty-state">
+        <div class="empty-icon">✓</div>
+        <h2>You're all caught up!</h2>
+        <p>Add a task above to get started.</p>
+      </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <span>
+        <span id="remaining-count">0</span> tasks remaining
+      </span>
+
+      <button id="clear-completed">
+        Clear completed
+      </button>
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
