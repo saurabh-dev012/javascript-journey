@@ -1,62 +1,59 @@
-# JavaScript Journey 🚀
+# JavaScript Journey
 
-This repository is a hands-on JavaScript learning path covering core web development concepts, problem-solving practice, and small real-world projects built with HTML, CSS, and JavaScript.
+A hands-on JavaScript learning path with focused practice exercises and small browser projects built with HTML, CSS, and JavaScript.
 
-## Overview
+## What is inside?
 
-This repo is organized into two main sections:
+The repository follows a simple progression:
 
-- Practice problems and concept exercises
-- Small frontend projects for applying the concepts in real UI workflows
+1. Learn a JavaScript concept in `Practice-Problems/`.
+2. Reinforce it with a focused exercise.
+3. Apply it in one of the projects under `projects/`.
 
-## Learning Areas Covered
+### Practice exercises
 
-- DOM manipulation
-- Events and event handling
-- Functions and closures
-- Closure-based UI practice
-- Objects and data modeling
-- Timers and intervals
-- LocalStorage, sessionStorage, and cookies
-- Form validation and UI interactions
-- Basic project-building workflow with JavaScript
+| Topic | Focus |
+| --- | --- |
+| [`dom/`](Practice-Problems/dom/) | Selecting, creating, and updating page elements |
+| [`events-and-eventHandling/`](Practice-Problems/events-and-eventHandling/) | User input and browser events |
+| [`functions/`](Practice-Problems/functions/) | Functions, reusable logic, and calculations |
+| [`closures/`](Practice-Problems/closures/) | Private state and closure-based behavior |
+| [`classes/`](Practice-Problems/classes/) | JavaScript classes |
+| [`oops/`](Practice-Problems/oops/) | Object-oriented programming concepts |
+| [`objects/`](Practice-Problems/objects/) | Objects and data modeling |
+| [`timers-and-intervals/`](Practice-Problems/timers-and-intervals/) | Countdown and progress behavior |
+| [`localStorage-sessionStorage-cookies/`](Practice-Problems/localStorage-sessionStorage-cookies/) | Browser storage APIs |
 
-## Repository Structure
+### Browser projects
 
-### Practice Problems
+Each project is self-contained and includes an `index.html` file.
 
-The `Practice-Problems/` folder includes exercises grouped by topic:
+| Project | Description |
+| --- | --- |
+| [`digital-clock/`](projects/digital-clock/) | Displays a live digital clock |
+| [`email-and-password-validator/`](projects/email-and-password-validator/) | Validates email and password input |
+| [`random-emojiGenerator/`](projects/random-emojiGenerator/) | Generates random emojis |
+| [`random-password-generator/`](projects/random-password-generator/) | Generates random passwords |
+| [`to-do/`](projects/to-do/) | Adds, completes, filters, and removes tasks |
+| [`user-finder/`](projects/user-finder/) | Searches for and displays users |
 
-- `dom/` — DOM-related tasks
-- `events-and-eventHandling/` — user interaction patterns
-- `functions/` — function practice, closures, and reusable logic
-- `closures/` — closure-focused mini exercises such as private counters and toaster interactions
-- `classes/` — class-based JavaScript practice
-- `oops/` — object-oriented programming practice examples
-- `localStorage-sessionStorage-cookies/` — browser storage concepts
-- `objects/` — object-oriented JS exercises
-- `timers-and-intervals/` — countdown and async-style timing tasks
+## Run a project
 
-### Projects
+No build tools, package manager, or dependencies are required.
 
-The `projects/` folder contains mini frontend apps:
+1. Clone or download this repository.
+2. Open a project folder, such as `projects/to-do/`.
+3. Launch its `index.html` file in a browser.
 
-- `email-and-password-validator/` — form validation project
-- `random-emojiGenerator/` — emoji generator UI
-- `user-finder/` — user search and finder interface
+For the best editing experience, open the repository in VS Code and use a local live-server extension if desired.
 
-## Tech Stack Used
+## Technology
 
-- HTML
-- CSS
-- JavaScript
-- GitHub for version control
-- GitHub Copilot for guided coding support
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser APIs, including DOM events and Web Storage
 
-## Goal
+## Learning goal
 
-The purpose of this repository is to build strong JavaScript fundamentals while creating practical, portfolio-friendly frontend mini projects.
-
-## Notes
-
-This repo is intended as a progress tracker for learning, practicing, and continuously improving JavaScript development skills through real examples.
+Build strong JavaScript fundamentals by moving from small, isolated examples to practical frontend interfaces. The repository also serves as a record of continued practice and improvement.
